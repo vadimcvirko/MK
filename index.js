@@ -1,4 +1,4 @@
-player1 = {
+subzero = {
     name: 'subzero',
     hp : 100,
     img : 'http://reactmarathon-api.herokuapp.com/assets/subzero.gif',
@@ -8,7 +8,7 @@ player1 = {
     },
 }
 
-player2 = {
+liukang = {
     name: 'liukang',
     hp : 100,
     img : 'http://reactmarathon-api.herokuapp.com/assets/liukang.gif',
@@ -18,7 +18,7 @@ player2 = {
     },
 }
 
-function createPlayer (player, name, hp, ){
+function createPlayer (player, pers, hp ){
 
     const $player1= document.createElement('div')
     $player1.classList.add(player);
@@ -31,14 +31,14 @@ function createPlayer (player, name, hp, ){
 
     const $life = document.createElement('div')
     $life.classList.add('life')
-    $life.style.width=(hp +'%')
+    $life.style.width=(pers.hp +'%')
 
     const $name = document.createElement('div')
     $name.classList.add('name')
-    $name.innerText=(name)
+    $name.innerText=(pers.name)
 
     const $img = document.createElement('img')
-    $img.src=('http://reactmarathon-api.herokuapp.com/assets/subzero.gif')
+    $img.src = pers.img
 
     const $arenas = document.querySelector('.arenas')
 
@@ -50,5 +50,5 @@ function createPlayer (player, name, hp, ){
     $character.appendChild($img)
 }
 
-createPlayer('player1', 'subzero', 50);
-createPlayer('player2', 'liukang', 80);
+createPlayer('player1', subzero, 50);
+createPlayer('player2' , liukang, 80);
