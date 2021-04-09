@@ -1,20 +1,20 @@
-subzero = {
+const  subzero = {
     name: 'subzero',
     hp : 100,
     img : 'http://reactmarathon-api.herokuapp.com/assets/subzero.gif',
     weapon: ['freezing'],
     attack: function (){
-        console.log(name + 'fight')
+        console.log(this.name + 'fight')
     },
 }
 
-liukang = {
+const  liukang = {
     name: 'liukang',
     hp : 100,
     img : 'http://reactmarathon-api.herokuapp.com/assets/liukang.gif',
     weapon: ['liukang'],
     attack: function (){
-        console.log(name + 'fight')
+        console.log(this.name + 'fight')
     },
 }
 
